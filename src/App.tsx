@@ -1,13 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
+import { useDialog } from "./hooks/useDialog";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+  const [Dialog, setStep] = useDialog(["상세 정보", "해피해피"]);
 
   return (
     <>
+      <Dialog>
+        <Dialog.Step name="상세 정보">
+          <div>상세정보</div>
+        </Dialog.Step>
+        <Dialog.Step name="해피해피">
+          <div>해피해피</div>
+        </Dialog.Step>
+      </Dialog>
+      <button onClick={() => setStep("해피해피")}>앞으로</button>
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -29,7 +40,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

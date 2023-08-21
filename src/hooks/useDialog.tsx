@@ -1,34 +1,39 @@
-import { useMemo, useCallback } from "react";
-import { CustomDialog } from "../components/dialogs/CustomDialog";
+import { useCallback, useMemo, useState } from "react";
+import {
+  CustomDialog,
+  CustomDialogProps,
+  Step,
+} from "../components/dialogs/CustomDialog";
 import { NonEmptyArray } from "../types/common.interface";
 
+type RouteDialogProps<Steps extends NonEmptyArray<string>> = Omit<
+  CustomDialogProps<Steps>,
+  "steps" | "step"
+>;
+
 export const useDialog = <Steps extends NonEmptyArray<string>>(
-  steps: Steps,
-  options?: {
-    initialStep?: Steps[number];
-    onStepChange?: (name: Steps[number]) => void;
-  }
-): readonly [DialogComponent<Steps>, (step: Steps[number], options?: any)] => {
+  steps: Steps
+) => {
+  const [stepNumber, setStepNumber] = useState<number>(0);
 
   const DialogComponent = useMemo(
-    () => 
+    () =>
       Object.assign(
-        function RouteFunnel(props) {
-          // step에 맞는 Dialog 리턴
-          return <CustomDialog<Steps> steps={steps} step={step} {...props} />;
+        function RouteDialog(props: RouteDialogProps<Steps>) {
+          return (
+            <CustomDialog steps={steps} step={steps[stepNumber]} {...props} />
+          );
         },
         {
           Step,
         }
       ),
-    []
+    [stepNumber]
   );
 
-  const setStep = useCallback(
-    (step: Steps[number], setStepOptions?: any) => {
-      options?.onStepChange?.(step);
+  const setStep = useCallback((next: any) => {
+    setStepNumber(stepNumber + 1);
+  }, []);
 
-    },
-    [options]
-  );
-}
+  return [DialogComponent, setStep];
+};
