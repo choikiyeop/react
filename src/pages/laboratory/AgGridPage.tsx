@@ -3,7 +3,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import 'ag-grid-community/styles/ag-grid.css'; // 항상 필요
 import 'ag-grid-community/styles/ag-theme-alpine.css'; // 옵션
 
-export default function AgGrid() {
+export default function AgGridPage() {
   const gridRef = useRef<AgGridReact>(null);
   const [rowData, setRowData] = useState();
   const [columnDefs, setColumnDefs] = useState([

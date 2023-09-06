@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "@/App";
 import ErrorPage from "@/pages/ErrorPage";
 import LaboratoryPage from "@/pages/LaboratoryPage";
-import AgGrid from "@/pages/laboratory/AgGrid";
+import AgGridPage from "@/pages/laboratory/AgGridPage";
 import TestPage from "@/pages/TestPage";
 
 export const router = createBrowserRouter([
@@ -17,7 +17,7 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "aggrid",
-        element: <AgGrid />
+        element: <AgGridPage />
       },
       {
         path: "",
