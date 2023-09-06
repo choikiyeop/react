@@ -12,6 +12,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <RecoilRoot>
     <QueryClientProvider client={queryClient}>
       <RouterProvider router={router} />
-    </QueryClientProvider>,
+    </QueryClientProvider>
   </RecoilRoot>
 )

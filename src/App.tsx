@@ -3,6 +3,7 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import { useDialog } from "./hooks/useDialog";
+import { Link } from "react-router-dom";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -10,6 +11,8 @@ function App() {
 
   return (
     <>
+      기본 페이지
+      <Link to={"/laboratory"}>실험실</Link> 
       <Dialog>
         <Dialog.Step name="상세 정보">
           <div>상세정보</div>
