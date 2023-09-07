@@ -4,6 +4,7 @@ import ErrorPage from "@/pages/ErrorPage";
 import LaboratoryPage from "@/pages/LaboratoryPage";
 import AgGridPage from "@/pages/laboratory/AgGridPage";
 import TestPage from "@/pages/TestPage";
+import DragAndDropPage from "@/pages/laboratory/DragAndDropPage";
 
 export const router = createBrowserRouter([
   {
@@ -20,8 +21,8 @@ export const router = createBrowserRouter([
         element: <AgGridPage />
       },
       {
-        path: "",
-        element: <></>
+        path: "drag-and-drop",
+        element: <DragAndDropPage />
       }
     ]
   },
