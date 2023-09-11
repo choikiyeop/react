@@ -17,7 +17,7 @@ export default function DragAndDropPage() {
 
   useEffect(() => {
     setGroups([['item0', 'item1'], ['item2']]);
-  }, [])
+  }, []);
 
   return(
     <div>

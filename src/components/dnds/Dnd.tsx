@@ -5,8 +5,8 @@ import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 interface DndProps {
   groups: Array<string>[] | null;
   setGroups: React.Dispatch<React.SetStateAction<string[][]>> | null;
-  groupStyle?: any;
-  itemStyle?: any;
+  groupStyle?: object;
+  itemStyle?: object;
 }
 
 export default function Dnd({
