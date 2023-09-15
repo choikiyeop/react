@@ -7,6 +7,7 @@ import TestPage from "@/pages/TestPage";
 import DragAndDropPage from "@/pages/laboratory/DragAndDropPage";
 import TodoListPage from "@/pages/laboratory/TodoListPage";
 import TreeViewPage from "@/pages/laboratory/TreeViewPage";
+import LeafletPage from "@/pages/laboratory/LeafletPage";
 
 export const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ export const router = createBrowserRouter([
       {
         path: "drag-and-drop",
         element: <DragAndDropPage />
+      },
+      {
+        path: 'leaflet',
+        element: <LeafletPage />
       },
       {
         path: "todolist",
