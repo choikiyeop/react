@@ -11,7 +11,7 @@ type RouteDialogProps<Steps extends NonEmptyArray<string>> = Omit<
   "steps" | "step"
 >;
 
-export const useDialog = <Steps extends NonEmptyArray<string>>(
+export const useFunnel = <Steps extends NonEmptyArray<string>>(
   steps: Steps
 ) => {
   const [stepNumber, setStepNumber] = useState<number>(0);

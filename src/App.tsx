@@ -2,12 +2,11 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import { useDialog } from "./hooks/useDialog";
 import { Link } from "react-router-dom";
 
+/** @jsxImportSource @emotion/react */
 function App() {
   const [count, setCount] = useState(0);
-  const [Dialog, setStep] = useDialog(["상세 정보", "해피해피"]);
 
   return (
     <>

@@ -1,10 +1,13 @@
 import { useState } from "react";
 import { Button } from "@mui/material";
-import { useDialog } from "../hooks/useDialog";
+import { useRecoilState } from "recoil";
+import { objState } from "@/store/store";
+import ChildComponent from "./ChildComponent";
 
 export default function TestPage() {
   const [open, setOpen] = useState<boolean>(false);
-  const [Dialog, setState] = useDialog(['apartment-type', 'select-region', 'done'] as const);
+  const [obj, setObj] = useRecoilState(objState);
+  console.log(obj);
 
   const handleOpen = () => {
     setOpen(true);
@@ -17,6 +20,7 @@ export default function TestPage() {
   return(
     <div>
       <Button variant="outlined" onClick={handleOpen} />
+      <ChildComponent></ChildComponent>
     </div>
   );
 }
