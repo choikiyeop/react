@@ -1,13 +1,11 @@
-import MyModal from "@/components/modals/MyModal";
+import { modals } from "@/context/Modals";
 import useModals from "@/hooks/useModals"
-import { Dialog } from "@mui/material";
-
 
 export default function ModalPage() {
   const { openModal } = useModals();
 
   const handleClick = () => {
-    openModal(MyModal, {
+    openModal(modals.myModal, {
       onSubmit: () => {
         console.log("제출");
       }

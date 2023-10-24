@@ -1,5 +1,10 @@
 import { ModalsDispatchContext, ModalsStateContext } from "@/context/ModalsContext";
+import React, { Suspense } from "react";
 import { useContext } from "react";
+
+export const modals = {
+  myModal: React.lazy(() => import('@/components/modals/MyModal')),
+}
 
 const Modals = () => {
   const openedModals = useContext(ModalsStateContext);
@@ -20,7 +25,7 @@ const Modals = () => {
       onClose();
     }
 
-    return <Component key={index} onClose={onClose} onSubmit={handleSubmit} {...restProps} />
+    return <Suspense fallback={<></>}><Component key={index} onClose={onClose} onSubmit={handleSubmit} {...restProps} /></Suspense>
   })
 }
 
