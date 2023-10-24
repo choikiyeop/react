@@ -8,6 +8,7 @@ import DragAndDropPage from "@/pages/laboratory/DragAndDropPage";
 import TodoListPage from "@/pages/laboratory/TodoListPage";
 import TreeViewPage from "@/pages/laboratory/TreeViewPage";
 import LeafletPage from "@/pages/laboratory/LeafletPage";
+import DialogPage from "@/pages/laboratory/DialogPage";
 
 export const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ export const router = createBrowserRouter([
       {
         path: "aggrid",
         element: <AgGridPage />
+      },
+      {
+        path: "dialog",
+        element: <DialogPage />
       },
       {
         path: "drag-and-drop",
