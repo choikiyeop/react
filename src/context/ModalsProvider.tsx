@@ -1,4 +1,4 @@
-import Modals from "@/components/modals/Modals";
+import Modals from "./Modals";
 import { ModalsDispatchContext, ModalsStateContext } from "./ModalsContext"
 import { useState, useMemo } from "react";
 

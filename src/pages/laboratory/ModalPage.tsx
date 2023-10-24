@@ -7,7 +7,11 @@ export default function ModalPage() {
   const { openModal } = useModals();
 
   const handleClick = () => {
-    openModal(MyModal, { open: true });
+    openModal(MyModal, {
+      onSubmit: () => {
+        console.log("제출");
+      }
+    });
   }
 
   return(
