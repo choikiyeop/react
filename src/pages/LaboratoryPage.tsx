@@ -6,6 +6,7 @@ export default function LaboratoryPage() {
     <div>
       <div className="flex justify-center">
         <Link to={"/laboratory/aggrid"} className="px-3">AgGrid</Link>
+        <Link to={"/laboratory/dialog"} className="px-3">DialogPage</Link>
         <Link to={"/laboratory/modal"} className="px-3">ModalPage</Link>
         <Link to={"/laboratory/drag-and-drop"} className="px-3">DragAndDrop</Link>
         <Link to={'/laboratory/leaflet'}>Leaflet</Link>
