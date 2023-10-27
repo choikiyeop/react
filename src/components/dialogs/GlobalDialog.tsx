@@ -4,9 +4,9 @@ import { useRecoilState } from "recoil";
 
 export type DialogType = "MyDialog" | "MyDialog2";
 
-export const dialogList: Record<DialogType, React.LazyExoticComponent<any>> = {
-  MyDialog: React.lazy(() => import('@/components/dialogs/MyDialog')),
-  MyDialog2: React.lazy(() => import('@/components/dialogs/MyDialog2'))
+const dialogList: Record<DialogType, React.LazyExoticComponent<({ onClose }: { onClose: () => void }) => React.ReactNode>> = {
+  "MyDialog": React.lazy(() => import('@/components/dialogs/MyDialog')),
+  "MyDialog2": React.lazy(() => import('@/components/dialogs/MyDialog2')),
 }
 
 export default function GlobalDialog() {
@@ -25,5 +25,4 @@ export default function GlobalDialog() {
       </Suspense>
     );
   })
-
 }
