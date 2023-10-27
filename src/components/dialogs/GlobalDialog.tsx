@@ -20,8 +20,8 @@ export default function GlobalDialog() {
     const DialogComponent = dialogList[dialog];
 
     return (
-      <Suspense>
-        <DialogComponent key={index} onClose={closeDialog} />
+      <Suspense key={index}>
+        <DialogComponent onClose={closeDialog} />
       </Suspense>
     );
   })
