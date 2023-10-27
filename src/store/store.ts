@@ -1,6 +1,7 @@
+import { DialogType } from "@/components/dialogs/GlobalDialog";
 import { atom } from "recoil";
 
-export const dialogsState = atom<Array<string>>({
+export const dialogsState = atom<Array<DialogType>>({
   key: "dialogsState",
   default: []
 })

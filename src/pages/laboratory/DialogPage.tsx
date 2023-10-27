@@ -9,9 +9,14 @@ export default function DialogPage() {
     setDialogs(["MyDialog"])
   }
 
+  const openDialog2 = () => {
+    setDialogs(["MyDialog2"]);
+  }
+
   return(
     <div>
       <button onClick={openDialog}>Dialog 열기</button>
+      <button onClick={openDialog2}>Dialog2 열기</button>
     </div>
   )
 }
