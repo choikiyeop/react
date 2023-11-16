@@ -12,14 +12,6 @@ function App() {
     <>
       기본 페이지
       <Link to={"/laboratory"}>실험실</Link> 
-      <Dialog>
-        <Dialog.Step name="상세 정보">
-          <div>상세정보</div>
-        </Dialog.Step>
-        <Dialog.Step name="해피해피">
-          <div>해피해피</div>
-        </Dialog.Step>
-      </Dialog>
       <button onClick={() => setStep("해피해피")}>앞으로</button>
       <div>
         <a href="https://vitejs.dev" target="_blank">
