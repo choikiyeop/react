@@ -10,6 +10,7 @@ import TreeViewPage from "@/pages/laboratory/TreeViewPage";
 import LeafletPage from "@/pages/laboratory/LeafletPage";
 import ModalPage from "@/pages/laboratory/ModalPage";
 import DialogPage from "@/pages/laboratory/DialogPage";
+import KakaoPostCodePage from "@/pages/laboratory/KakaoPostcodePage";
 
 export const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ export const router = createBrowserRouter([
       {
         path: "drag-and-drop",
         element: <DragAndDropPage />
+      },
+      {
+        path: "kakao-postcode",
+        element: <KakaoPostCodePage />
       },
       {
         path: 'leaflet',
