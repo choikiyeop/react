@@ -1,6 +1,6 @@
 import KakaoPostcode from "@/components/postcodes/KakaoPostcode";
 
-export default function KakaoPostCodePage() {
+export default function PostCodePage() {
 
   return(
     <div>
