@@ -17,7 +17,7 @@
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.14.8",
     "@mui/x-tree-view": "^6.0.0-alpha.2",
-    "@tanstack/react-query": "^4.33.0",
+    "@tanstack/react-query": "^5.8.4",
     "ag-grid-community": "^30.1.0",
     "ag-grid-react": "^30.1.0",
     "axios": "^1.5.0",
