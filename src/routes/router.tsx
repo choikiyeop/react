@@ -11,6 +11,7 @@ import LeafletPage from "@/pages/laboratory/LeafletPage";
 import ModalPage from "@/pages/laboratory/ModalPage";
 import DialogPage from "@/pages/laboratory/DialogPage";
 import PostCodePage from "@/pages/laboratory/PostcodePage";
+import JavascriptPage from "@/pages/laboratory/JavascriptPage";
 
 export const router = createBrowserRouter([
   {
@@ -35,7 +36,11 @@ export const router = createBrowserRouter([
         element: <DragAndDropPage />
       },
       {
-        path: 'leaflet',
+        path: "javascript",
+        element: <JavascriptPage />,
+      },
+      {
+        path: "leaflet",
         element: <LeafletPage />
       },
       {
